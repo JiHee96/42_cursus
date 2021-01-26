@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jihekim <jihekim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/14 00:30:23 by jihekim           #+#    #+#             */
-/*   Updated: 2021/01/14 00:30:23 by jihekim          ###   ########.fr       */
+/*   Created: 2021/01/14 12:49:56 by jihekim           #+#    #+#             */
+/*   Updated: 2021/01/14 12:49:56 by jihekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int    ft_memcmp(const void *s1, const void *s2, size_t len)
+char    *ft_strrchr(const char *str, int c)
 {
-    const unsigned char *s1p;
-    const unsigned char *s2p;
-    size_t              i;
+    size_t  len;
 
-    s1p = (const unsigned char *)s1;
-    s2p = (const unsigned char *)s2;
-    i = 0;
-    
-    whlie (i < len)
+    len = ft_strlen(str);
+    if ((char)c == '\0')
+       return ((char *)str + len);
+    whlie (len != 0)
     {
-        if(s1p[i] != s2p[i])
-            return (s1p[i] - s2p[i]);
-        i++;
+        if (*(s + len) == c)
+            return ((char *)(s + len));
     }
     return (NULL);
 }
