@@ -6,7 +6,7 @@
 /*   By: jihekim <jihekim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 16:08:20 by jihekim           #+#    #+#             */
-/*   Updated: 2021/01/27 16:08:20 by jihekim          ###   ########.fr       */
+/*   Updated: 2021/01/27 17:26:00 by jihekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,11 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-/*
-**	Struct
-*/
-
 typedef struct	s_list
 {
 	void			*content;
 	struct s_list	*next;
 }				t_list;
-
-/*
-**	Part 1 - Libc functions
-*/
 
 void			*ft_memset(void *s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
@@ -55,10 +47,6 @@ int				ft_tolower(int c);
 void			*ft_calloc(size_t count, size_t size);
 char			*ft_strdup(const char *str);
 
-/*
-**	Part 2 - Additional Functions
-*/
-
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
@@ -69,10 +57,6 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
-
-/*
-**	Bonus part - Linked list
-*/
 
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **lst, t_list *new);
