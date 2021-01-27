@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jihekim <jihekim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/14 01:57:26 by jihekim           #+#    #+#             */
-/*   Updated: 2021/01/14 01:57:26 by jihekim          ###   ########.fr       */
+/*   Created: 2021/01/27 15:52:37 by jihekim           #+#    #+#             */
+/*   Updated: 2021/01/27 15:52:37 by jihekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strchr(const char *str, int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-    while ((char *)str)
-    {
-        if ((char *)str == c)
-            return ((char *)str);
-        str++;
-    }
-    if (c == '\0' && (char *)str == '\0')
-        return ((char *)str);
-    return (NULL);
+	unsigned int	nbr;
+
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nbr = -n;
+	}
+	else
+	{
+		nbr = n;
+	}
+	if (nbr >= 10)
+		ft_putnbr_fd(nbr / 10, fd);
+	ft_putchar_fd(nbr % 10 + '0', fd);
 }
