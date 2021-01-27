@@ -6,7 +6,7 @@
 /*   By: jihekim <jihekim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 17:51:30 by jihekim           #+#    #+#             */
-/*   Updated: 2021/01/27 17:51:30 by jihekim          ###   ########.fr       */
+/*   Updated: 2021/01/27 17:58:05 by jihekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,3 +85,4 @@ void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *l, void *(*f)(void *), void (*d)(void *));
 
 #endif
+
