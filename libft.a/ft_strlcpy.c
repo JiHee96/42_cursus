@@ -12,16 +12,16 @@
 
 #include "libft.h"
 
-size_t  ft_strlcpy(char *dst, const char *src, size_t size)
+size_t  ft_strlcpy(char *dst, const char *src, size_t len)
 {
     size_t  srclen;
     size_t  i;
 
     srclen = ft_strlen(src);
     i = 0;
-    if (size)
+    if (len)
     {
-        while (src[i] && (i + 1) < size)
+        while (src[i] && (i + 1) < len)
         {
             dst[i] = src[i];
             i++;

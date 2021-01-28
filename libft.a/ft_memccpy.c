@@ -12,18 +12,26 @@
 
 #include "libft.h"
 
+<<<<<<< HEAD
 void	*ft_memccpy(void *dst, const void *src, int c, size_t len)
+=======
+<<<<<<< HEAD
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+=======
+void	*ft_memccpy(void *dst, const void *src, int c, size_t len)
+>>>>>>> d239ba84f63ebef7c0dd152aa6fa4e8cbc95ad43
+>>>>>>> 149cd34328523700c8b5a77a6271de0a3f15404d
 {
-  	size_t			cnt;
+	size_t			cnt;
 	unsigned char	*srcc;
 	unsigned char	*dstc;
 
 	cnt = 0;
 	srcc = (unsigned char*)src;
 	dstc = (unsigned char*)dst;
-	if (len)
+	if (n)
 	{
-		while (cnt < len)
+		while (cnt < n)
 		{
 			dstc[cnt] = srcc[cnt];
 			if (srcc[cnt] == (unsigned char)c)
