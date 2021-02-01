@@ -6,7 +6,7 @@
 /*   By: jihekim <jihekim@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 17:04:24 by jihekim           #+#    #+#             */
-/*   Updated: 2021/01/26 17:04:24 by jihekim          ###   ########.fr       */
+/*   Updated: 2021/01/29 21:32:23 by jihekim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *str)
 	char	*newstr;
 
 	len = ft_strlen(str);
-	new_str = (char *)malloc(sizeof(char) * (len + 1));
+	newstr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!(newstr))
 		return (NULL);
 	i = 0;
