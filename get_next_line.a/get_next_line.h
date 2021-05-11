@@ -6,7 +6,7 @@
 # include <limits.h>
 
 # ifndef OPEN_MAX
-#  define OPEN_MAX	10240
+# define OPEN_MAX	10240
 # endif
 
 int		get_next_line(int fd, char **line);
